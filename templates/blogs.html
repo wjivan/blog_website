@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<!--Add in the tag labels-->
+{% block content %}
+  <h3 class="post-title"><b>Posts</b></h3>
+
+  <div class="block">
+    <a href="{{ url_for("blogs") }}">All</a>
+  </div>
+
+  {% for tag in tags %}
+    <div class="block">
+      <a href="{{ url_for("tag", tag=tag) }}">{{ tag }}</a>
+    </div>
+  {% endfor %}
+
+<!--Add in the list of page summaries populated in _list.html-->
+  {% with pages = pages %}
+    {% include "_list.html" %}
+  {% endwith %}
+{% endblock content %}

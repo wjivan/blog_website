@@ -1,0 +1,26 @@
+{
+  "personal": [
+    {
+      "description":  "Generates artistic QR Codes",
+      "image": "qr.png",
+      "link": "https://github.com/wjivan",
+      "title": "DSSG-DNCP"
+    }
+  ],
+  "academic": [
+    {
+      "description":  "Predicting corruption in public procurement using machine learning",
+      "image": "dncp.png",
+      "link": "https://github.com/alan-turing-institute/DSSG19-DNCP-PUBLIC",
+      "title": "DSSG-DNCP"
+    }
+  ],
+  "presentations": [
+    {
+      "description": "Data & Policy conference 2020",
+      "image": "data_policy.jpg",
+      "link": "https://www.youtube.com/watch?v=r7KKq1_7gMg&t=384s",
+      "title": "DNCP"
+    }
+  ]
+}

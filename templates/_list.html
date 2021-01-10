@@ -1,0 +1,34 @@
+<!--This file is like a function that generates the 
+  blocks of summaries of blogposts using the pages input.
+  It serves to summarise blog-posts for blogs.html as well as
+  tag.html. So that a smaller subset of blog-posts are displayed.
+-->
+<ul>
+{% for page in pages | sort(attribute='date', reverse=True) %}
+    <li>
+      <b>{{ page.title }}</b><br />
+      {{ page.date }}
+
+      <!--If tags are non-zero-->
+      {% if page.meta.tags|length %}
+
+        <!--Insert a separator | and some fontawesome tag icon-->
+        | <i class="fa fa-tags fa-lg"></i>
+
+        <!--Insert all the tags-->
+        {% for page_tag in page.meta.tags %}
+          <div class="block">
+            <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+          </div>
+
+        {% endfor %}
+      {% endif %}
+      <br>
+      {{ page.description }} <br>
+      <a class="left" href="{{ url_for("page", path=page.path) }}"><i>Read More</i></a>
+    </li>
+    {% if not loop.last %}<br><br>{% endif %}
+{% else %}
+    <li>No page.</li>
+{% endfor %}
+</ul>
