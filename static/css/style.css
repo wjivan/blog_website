@@ -1,7 +1,7 @@
 body {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
-    background-color: #0f1218;
-    color: #c8d1d9;
+    background-color: #f2d6ae;
+    color: black; 
 }
 
 /* Upper Right Links Animations */
@@ -66,13 +66,13 @@ body {
     width: auto;
     padding: 1px 10px 1px 10px;
     margin: auto;
-    background: #2e507c;
+    background: #b5c7d3;
     display: inline-block;
     border-radius: 10px;
 }
 
 .block a {
-    color: #58a6ff;
+    color: black;
 }
 
 .block:hover {
@@ -106,7 +106,7 @@ i {
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    color: #c8d1d9;
+    color: #92a9b8;
 }
 
 .link-fa i:hover {
@@ -139,18 +139,18 @@ hr.fade {
 }
 
 .project-title {
-    color: #c8d1d9;
+    color: #0F4C81;
     -webkit-transition: all 0.50s;
     transition: all 0.50s;
 }
 
 .project-title:hover {
-    color: #1b9ce2;
+    color: white;
 }
 
 /* Courses Section Boxes */
 .card-course {
-    background: #161c22;
+    background: #b5c7d3;
     display: inline-block;
     height: 25%;
     margin: 1rem;
@@ -163,12 +163,12 @@ hr.fade {
 }
 
 .card-course-1 {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(244, 186, 186, 0.12), 0 1px 2px rgba(244, 186, 186, 0.24);
     transition: all 0.2s cubic-bezier(.25, .8, .25, 1);
 }
 
 .card-course-1:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(244, 186, 186, 0.25), 0 10px 10px rgba(244, 186, 186, 0.22);
 }
 
 .card-course-1 img {
@@ -179,7 +179,7 @@ hr.fade {
 
 /* Navigation Bar */
 .navbar {
-  background: #161c22;
+  background: #0F4C81;
   top: 0;
   right: 0;
   left: 0;
@@ -187,58 +187,11 @@ hr.fade {
 
 /* Bottom Bar */
 .navfoot {
-  background: #161c22;
+  background: #0F4C81;
   bottom: 0;
   right: 0;
   left: 0;
   position: fixed;
-}
-
-/* Resources Table */
-.resourceTable {
-  /* table-layout: auto; */
-}
-
-.resourceTable .nonSection {
-  width: 12%;
-}
-
-.resourceTable th, td {
-  border: 2px solid #161c22;
-  padding: 5px;
-}
-
-.resourceTable th {
-  padding: 10px 0px 10px 5px;
-  text-align: left;
-}
-
-/* CS 161 Demo Cards */
-.cs161-demo-table {
-  display: flex;
-}
-
-.cs161-demo-table .demo-card {
-  margin: 5px;
-  display: flex;
-  border-color: gray;
-  border-style: dotted;
-  width: 25%;
-  border-radius: 5px;
-}
-
-.cs161-demo-table .demo-card .picture {
-  width: 40%;
-  text-align: center;
-  margin: 1em 0;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.cs161-demo-table .demo-card .description {
-  flex-grow: 1;
-  vertical-align: middle;
-  padding: 2px;
 }
 
 /* Blog Post Styling */

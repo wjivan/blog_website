@@ -276,3 +276,8 @@ hr.fade {
 .dimLink:hover {
   opacity: 0.7;
 }
+
+/* Other styling */
+.center {
+  text-align: center;
+}
