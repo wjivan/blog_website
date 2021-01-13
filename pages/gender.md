@@ -4,11 +4,11 @@ description: Gender imbalance is hindering collaborations and the future of econ
 image: /static/pictures/Gender/gender-equality.png
 readtime: 2 MINS
 time: TUESDAY, DECEMBER 15, 2020
-tags: [Gender]
+tags: ["Gender Inequality"]
 
-<img src="/static/pictures/Gender/gender-network.png" alt="Drawing" style="height:800px;"/>
+<img class="responsive-img" src="/static/pictures/Gender/slide.png" alt="Slide" />
 
-We need to talk about gender imbalance in top-tier economics research. Looking at research outputs of 1,500 top economists in three prominent economics journals (NBER, CEPR, VOX) over a span of 15 years, I found that our discipline is a crushing and unrewarding environment for female economists. Here are some insights:
+Looking at research outputs of 1,500 top economists in three prominent economics journals (NBER, CEPR, VOX) over a span of 15 years, I found that our discipline is a crushing and unrewarding environment for female economists. Here are some insights:
 
 1. Male economists dominate the field. Female economists are dominated by sheer numbers. There is only one top female economist for every 10 top male economists. Furthermore, reputation and citations are very skewed towards the male colleagues. In the graph, I singled out Esther Duflo because, despite winning the 2019 Nobel Prize, Duflo's ranking based on citations and reputation (shown by size of the bubble) is a far cry from her male colleagues who have also won previous Noble Prizes. From a signalling point of view, this sends a very negative message to aspiring female economists - that even if you have reached the top of the field, your reputation within academia might still not be as great as your male colleagues.
 
