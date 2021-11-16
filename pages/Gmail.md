@@ -1,3 +1,11 @@
+title: Getting Gmail to work with Python
+date: 2021-10-15
+description: Using Gmail API
+image: /static/pictures/Gender/gender-equality.png
+readtime: 2 MINS
+time: TUESDAY, NOVEMBER, 2021
+tags: ["API"]
+
 # Getting Gmail to work with Python
 
 ## Environment set up

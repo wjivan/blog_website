@@ -1,3 +1,11 @@
+title: R functions
+date: 2021-10-15
+description: R functions that are worth remembering
+image: /static/pictures/Gender/gender-equality.png
+readtime: 2 MINS
+time: TUESDAY, NOVEMBER, 2021
+tags: ["R"]
+
 # Some R functions that blew my mind recently
 
 I use R at work and Python for my personal projects. I find that R's efficiency in data wrangling and visualisation is still really hard to beat. I stumbled across [David Robinson's Tidytuesday screencast](https://www.youtube.com/watch?v=5ub92c-5xFQ&t=119s) recently and it really blew my mind on the kind of efficiency you can obtain just sticking with the tidyverse packages. Here are some of the functions I have come to adopt from his videos. 

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Wen Jian">
+    <meta name="description" content="Economics and data science">
+
+    <title>Wen Jian</title>
+    <!--
+      Styles based on Materialize
+      Font-awesome used for icons
+      Custom styles for the rest
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/button.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6X3EFF1R0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B6X3EFF1R0');
+    </script>
+
+</head>
+<body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" style="color:white;"><b>WEN</b> JIAN</a>
+        <div style="float:right;">
+          <ul style="list-style:none;display:flex;">
+            <a href="/" class="left"><li class="link-list">ABOUT</li></a>
+            <a href="/blogs/" class="left"><li class="link-list">BLOG</li></a>
+            <a href="/projects/" class="left"><li class="link-list">PROJECTS</li></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="padding-bottom:100px;">
+        <br>
+        <main id="body-fade">
+            
+<br>
+<div style="text-align:center;">
+    <img class="ImageBorder" src=/static/pictures/Gender/gender-equality.png alt="Head Image" />
+    <h3>R functions</h3>
+    <div class="light-text">
+        <p>TUESDAY, NOVEMBER, 2021 &bull; 2 MINS </p>
+        <p>
+            
+            <div class="block">
+                <b><a href="/tag/R/">R</a></b>
+            </div>
+            <!--   -->
+            
+        </p>
+    </div>
+</div>
+<br>
+
+<div class="blog">
+    <h1>Some R functions that blew my mind recently</h1>
+<p>I use R at work and Python for my personal projects. I find that R's efficiency in data wrangling and visualisation is still really hard to beat. I stumbled across <a href="https://www.youtube.com/watch?v=5ub92c-5xFQ&amp;t=119s">David Robinson's Tidytuesday screencast</a> recently and it really blew my mind on the kind of efficiency you can obtain just sticking with the tidyverse packages. Here are some of the functions I have come to adopt from his videos. </p>
+<h2>1. Using count() to understand categorical variables</h2>
+<p>There are many times where I find myself trying to understand what are the unique factors of the categorical variables and what are their counts. My usual approach to doing this is through <code>table$variable</code> or <code>unique(df$variable)</code> using base R functions or <code>df %&gt;% distinct(variable)</code> using dplyr package. </p>
+<p>I now realise I could achieve so much more using <code>df %&gt;% count(variable, sort = T)</code> which basically gives you a sorted unique table. There is also an option to sum up weights by a second variable like this <code>df %&gt;% count(variable, sort = T, wt = weights)</code></p>
+<p>BONUS: There is also a function called <code>add_count(variable)</code> that adds a a counts column to the dataframe without the need to do <code>group_by(variable) %&gt;% mutate(count = n())</code>. </p>
+<h2>2. Using fct_lump_n() to group categorical variables</h2>
+<p>When we have a lot of levels in the categorical variables, sometimes what we are interested is in the top few categories and group the rest as "others". This function does that for you and it comes in a few flavours in the forcats package:</p>
+<ul>
+<li><code>fct_lump_n()</code>: lumps all levels except for top <code>n</code> most frequent</li>
+<li><code>fct_lump_min()</code>: allows you specify a minimum frequency</li>
+<li><code>fct_lump_lowfreq()</code>: lumps all the low frequencies automatically such that the "others" category is still the lowest frequency</li>
+</ul>
+<h2>3. Using fct_reorder() + geom_col() + coord_flip</h2>
+<p>In <a href="https://www.amazon.co.uk/Storytelling-Data-Cole-Nussbaumer-Knaflic/dp/1119621496">Story Telling with Data</a>, Knaflic talked about using a <strong>sorted horizontal barchart</strong> for plotting. I really like this kind of bar charts for its easy readability and clear messages. In R, it is really easy to do this plot using the fct_reorder() + geom_col() + coord_flip() functions. The trick here is to do a <code>mutate(fct_reorder(plot_variable, val))</code> to sort the factor level in ascending order </p>
+<h2>4. Using clean_names() to get nice column names</h2>
+<p>By default, this produces clean names in the snake format like <code>snake_format</code>. We can use this with <code>select(columnName1, columnName2) %&gt;% clean_name()</code> to produce <code>column_name1, column_name2</code>. Super neat!</p>
+<h2>5. Using map_dfr() to join up all dataframes while using map function</h2>
+<p>Usually when I use map function, I would give it a list of dataframes and then apply the function of interest to get a list of dataframes. I will then use <code>reduce</code> and <code>bind_rows</code> to join up everything together. However, this can now be achieved in one step in <code>map_dfr()</code>. </p>
+</div>
+
+<br><hr class="fade"><br>
+
+
+        </main>
+    </div>
+    <nav class="navfoot">
+      <div style="text-align:center;">
+        &copy; 2020 |
+        &thinsp; <a href="https://www.linkedin.com/in/wen-jian-48926b32/" class="link-fa"><i class="fa fa-linkedin fa-lg"></i></a>
+        &thinsp; <a href="https://github.com/wjivan" class="link-fa"><i class="fa fa-github fa-lg"></i></a>
+      </div>
+    </nav>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="/static/js/button.js"></script>
+</body>
+
+</html>

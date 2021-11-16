@@ -1,3 +1,11 @@
+title: Tidyverse functions
+date: 2021-11-16
+description: Tidyverse functions
+image: /static/pictures/Gender/gender-equality.png
+readtime: 2 MINS
+time: TUESDAY, NOVEMBER, 2021
+tags: ["API"]
+
 # Posts about R
 
 ## Posts about tidyverse functions
