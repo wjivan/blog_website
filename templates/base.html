@@ -2,65 +2,113 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Wen Jian">
-    <meta name="description" content="Economics and data science">
+  <title>Wen Jian</title>
     
-    <!-- Required meta tags for Bootstrap-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Wen Jian</title>
-    <!--
-      Styles based on Bootstrap
-      Font-awesome used for icons
-      Custom styles for the rest
-    -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wen Jian's blog">
+  <meta name="author" content="Wen Jian">    
+  <link rel="shortcut icon" href="favicon.ico"> 
   
-    <!-- minimum CSS for now
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/button.css">
-    -->
+  <!-- FontAwesome JS-->
+  <script defer src="/static/fontawesome/js/all.min.js"></script>
+  
+  <!-- Theme CSS -->  
+  <link id="theme-style" rel="stylesheet" href="/static/css/theme-2.css">
 
 </head>
 
 <body>
-    <nav class="navbar">
-      <div class="container">
-        <a href="{{ url_for("index") }}" style="color:white;"><b>WEN</b> JIAN</a>
-        <div style="float:right;">
-          <ul style="list-style:none;display:flex;">
-            <a href="{{ url_for("index") }}" class="left"><li class="link-list">ABOUT</li></a>
-            <a href="{{ url_for("blogs") }}" class="left"><li class="link-list">BLOG</li></a>
-            <a href="{{ url_for("projects") }}" class="left"><li class="link-list">PROJECTS</li></a>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container" style="padding-bottom:100px;">
-        <br>
-        <main id="body-fade">
-            {% block content %}
-            <p>Default content to be displayed</p>
-            {% endblock content %}
-        </main>
-    </div>
-    <nav class="navfoot">
-      <div style="text-align:center;">
-        &copy; 2020 |
-        &thinsp; <a href="https://www.linkedin.com/in/wen-jian-48926b32/" class="link-fa"><i class="fa fa-linkedin fa-lg"></i></a>
-        &thinsp; <a href="https://github.com/wjivan" class="link-fa"><i class="fa fa-github fa-lg"></i></a>
-      </div>
-    </nav>
 
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="index.html">Wen Jian's Blog</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="/static/images/profile.png" alt="image" >			
+					
+					<div class="bio mb-3">Hi, my name is Anthony Doe. Briefly introduce yourself here. You can also provide a link to the about page.<br><a href={{ url_for("blogs") }}>Find out more about me</a></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-start">
+					<li class="nav-item">
+					    <a class="nav-link active" href="index.html"><i class="fas fa-home fa-fw me-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw me-2"></i>Blog Post</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
+					</li>
+				</ul>
+				
+				<div class="my-2 my-md-3">
+				    <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/" target="_blank">Get in Touch</a>
+				</div>
+			</div>
+		</nav>
+    </header>
     
-      <!-- minimum javascript for now
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <script src="/static/js/button.js"></script>
-    -->
+    <div class="main-wrapper">
+	    
+	    <section class="cta-section theme-bg-light py-5">
+		    <div class="container text-center single-col-max-width">
+			    <h2 class="heading">Economics and data science blog</h2>
+			    <div class="intro">Welcome to my blog. Click on something that interests you.</div>
+          <!--Insert codes on gathering all the tags in the blogs-->
+          <!-- Note that tags is defined in app.py as a global-->
+          {% for tag in tags %}
+
+            <button type="button" class="btn btn-outline-primary">{{tag}}</button>
+
+          {% endfor %}
+		    </div><!--//container-->
+
+	    </section>
+	    
+      <!--Main section that other pages would extend goes here-->
+      <section>
+        <div class="container single-col-max-width">
+        <br>
+
+          {% block content %}
+          <p>Default content to be displayed</p>
+          {% endblock content %}
+
+        </div>
+      </section>
+	    
+	    <footer class="footer text-center py-2 theme-bg-dark">
+		   
+	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+		   
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+
+    <!-- Javascript -->          
+    <script src="/static/plugins/popper.min.js"></script> 
+    <script src="/static/plugins/bootstrap/js/bootstrap.min.js"></script> 
+
    
 </body>
 

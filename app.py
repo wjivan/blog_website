@@ -6,6 +6,7 @@ from flask import Flask, render_template
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
 from flaskext.markdown import Markdown
+from flask_bootstrap import Bootstrap
 
 # Configuration
 DEBUG = True
@@ -55,7 +56,7 @@ print(tags)
 # Note: templates default to 'templates' folder 
 @app.route('/')
 def index():
-    return render_template('about.html')
+    return render_template('about.html', tags=tags)
 
 @app.route('/blogs/')
 def blogs():
