@@ -49,5 +49,5 @@ In order to have a fair comparison, ideally we would really need size data from 
 
 <img class="responsive-img" src='static/output.png'>
 
-
+For code and further analysis, see [Github repo](https://github.com/wjivan/modernhousescraper)
 
