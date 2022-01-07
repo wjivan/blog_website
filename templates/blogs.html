@@ -5,7 +5,7 @@
   <h3 class="post-title"><b>Posts</b></h3>
 
   <div class="block">
-    <a href="{{ url_for("blogs") }}">All</a>
+    <a href="{{ url_for("index") }}">All</a>
   </div>
 
   {% for tag in tags %}
@@ -19,3 +19,4 @@
     {% include "_list.html" %}
   {% endwith %}
 {% endblock content %}
+
