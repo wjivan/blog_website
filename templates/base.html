@@ -17,13 +17,10 @@
   
   <!-- Theme CSS -->  
   <link id="theme-style" rel="stylesheet" href="/static/css/theme-2.css">
-
+  <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
 </head>
 
 <body>
-
-
-   
     <header class="header text-center">	    
 	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="index.html">Wen Jian's Blog</a></h1>
         
@@ -37,13 +34,11 @@
 				<div class="profile-section pt-3 pt-lg-0">
 				    <img class="profile-image mb-3 rounded-circle mx-auto" src="/static/images/profile.png" alt="image" >			
 					
-					<div class="bio mb-3">Hi, my name is Anthony Doe. Briefly introduce yourself here. You can also provide a link to the about page.<br><a href={{ url_for("blogs") }}>Find out more about me</a></div><!--//bio-->
+					<div class="bio mb-3">Economist who enjoys using data for social good<br><a href={{ url_for("index") }}>Find out more about me</a></div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
 			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
 			        </ul><!--//social-list-->
 			        <hr> 
 				</div><!--//profile-section-->
@@ -73,28 +68,36 @@
 		    <div class="container text-center single-col-max-width">
 			    <h2 class="heading">Economics and data science blog</h2>
 			    <div class="intro">Welcome to my blog. Click on something that interests you.</div>
-          <!--Insert codes on gathering all the tags in the blogs-->
           <!-- Note that tags is defined in app.py as a global-->
-          {% for tag in tags %}
-
-            <button type="button" class="btn btn-outline-primary">{{tag}}</button>
-
-          {% endfor %}
 		    </div><!--//container-->
-
 	    </section>
-	    
-      <!--Main section that other pages would extend goes here-->
-      <section>
-        <div class="container single-col-max-width">
-        <br>
 
-          {% block content %}
-          <p>Default content to be displayed</p>
-          {% endblock content %}
+      <div class="container">
+        <div class="row">
+          <div class="col">
+          {% for tag in tags_topical %}
+          <a href="{{ url_for("tag", tag=tag) }}" class="btn btn-primary btn-xs" role="button" aria-pressed="true">{{tag}}</a>
+          {% endfor %}
+          </div>
 
+          <div class="col">
+            {% for tag in tags_tech %}
+            <a href="{{ url_for("tag", tag=tag) }}" class="btn btn-secondary btn-xs" role="button" aria-pressed="true">{{tag}}</a>
+            {% endfor %}
+            </div>
         </div>
-      </section>
+      </div>
+
+      <!--Main section that other pages would extend goes here-->
+      <div class="container">
+      <br>
+
+        {% block content %}
+        <p>Default content to be displayed</p>
+        {% endblock content %}
+
+      </div>
+
 	    
 	    <footer class="footer text-center py-2 theme-bg-dark">
 		   

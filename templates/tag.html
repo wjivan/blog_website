@@ -5,20 +5,16 @@ that only includes the tagged posts. The below codes are the same for
 blogs
 -->
 {% block content %}
-  <h3 class="post-title">
+  <h3>
     <b>Posts</b>
-    <span class="light-text" style="font-size: 16px;">tagged {{ tag }}</span>
+    <br>
+    <span class="light-text" style="font-size: 16px;">Posts that are tagged <mark>{{tag}}</mark></span>
   </h3>
 
   <div class="block">
-    <a href="{{ url_for("blogs") }}">All</a>
+    <a href="{{ url_for("index") }}">All</a>
   </div>
 
-  {% for tag in tags %}
-    <div class="block">
-      <a href="{{ url_for("tag", tag=tag) }}">{{ tag }}</a>
-    </div>
-  {% endfor %}
 
   {% with pages=pages  %}
       {% include "_list.html" %}

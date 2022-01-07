@@ -45,7 +45,9 @@ FREEZER_REMOVE_EXTRA_FILES = False  # IMPORTANT: If this is True, all app files
 
 # Find all tags
 tags = sorted(set([tag for page in pages for tag in page.meta['tags']]))
-print(tags)
+tech = ['R', 'Python', 'SQL', 'Flask']
+tags_topical = set(tags) - set(tech)
+tags_tech = set(tags).intersection(tech)
 
 # Functionalities
 # @app.context_processor
@@ -56,21 +58,21 @@ print(tags)
 # Note: templates default to 'templates' folder 
 @app.route('/')
 def index():
-    return render_template('about.html', tags=tags)
+    return render_template('blogs.html', tags_topical=tags_topical, tags_tech=tags_tech, pages=pages, tags=tags)
 
-@app.route('/blogs/')
-def blogs():
-    return render_template('blogs.html', pages=pages, tags=tags)
+@app.route('/about/')
+def about():
+    return render_template('about.html', tags_topical=tags_topical, tags_tech=tags_tech)
 
 @app.route('/tag/<string:tag>/')
 def tag(tag):
     # Get pages objects for specific tags
     tagged = [p for p in pages if tag in p.meta.get('tags', [])]
-    return render_template('tag.html', pages=tagged, tag=tag, tags=tags)
+    return render_template('tag.html', pages=tagged, tag=tag, tags=tags, tags_topical=tags_topical, tags_tech=tags_tech)
 
 @app.route('/<path:path>/')
 def page(path):
-    return render_template('page.html', page=pages.get_or_404(path))
+    return render_template('page.html', page=pages.get_or_404(path), tags_topical=tags_topical, tags_tech=tags_tech)
 
 @app.route('/projects/')
 def projects():
