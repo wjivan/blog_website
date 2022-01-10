@@ -1,28 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br>
-<div style="text-align:center;">
-    <img class="ImageBorder" src={{ page.image }} alt="Head Image" />
-    <h3>{{ page.title }}</h3>
-    <div class="light-text">
-        <p>{{ page.time }} &bull; {{ page.readtime }} </p>
-        <p>
-            {% for page_tag in page.meta.tags %}
-            <div class="block">
-                <b><a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a></b>
-            </div>
-            <!-- {% if not loop.last %} | {% endif %}  -->
-            {% endfor %}
-        </p>
+<div class="mb-5">
+    <h2>{{page.title}}</h2>
+    <div class="meta"><span class="date">{{page.date}}</span></div>
+
+    {% for page_tag in page.meta.tags %}
+    <div class="block">
+        <b><a href="{{ url_for("tag", tag=page_tag) }}" class="text-decoration-none">{{ page_tag }}</a></b>
     </div>
-</div>
-<br>
-
-<div class="blog">
-    {{page.html|safe}}
+    <!-- {% if not loop.last %} | {% endif %}  -->
+    {% endfor %}
 </div>
 
-<br><hr class="fade"><br>
+    <div class="blog-post-body">
+        {{page.html|safe}}
+    </div>
 
 {% endblock content %}

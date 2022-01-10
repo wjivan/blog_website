@@ -6,8 +6,6 @@ readtime: 2 MINS
 time: TUESDAY, NOVEMBER, 2021
 tags: ["API"]
 
-# Getting Gmail to work with Python
-
 ## Environment set up
 `conda create --name jarvis python=3.7`
 

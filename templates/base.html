@@ -65,27 +65,31 @@
 	    <section class="cta-section theme-bg-light py-5">
 		    <div class="container text-center single-col-max-width">
 			    <h2 class="heading">Economics and data science blog</h2>
-			    <div class="intro">Welcome to my blog. Click on something that interests you.</div>
+			    <div class="intro">Click on something that interests you.</div>
           <!-- Note that tags is defined in app.py as a global-->
 		    </div><!--//container-->
 	    </section>
 
+      
+      
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col shadow-sm p-3 mb-5 bg-white rounded">
+          <p>Topics I write about:</p>
           {% for tag in tags_topical %}
           <a href="{{ url_for("tag", tag=tag) }}" class="btn btn-primary btn-xs" role="button" aria-pressed="true">{{tag}}</a>
           {% endfor %}
           </div>
 
-          <div class="col">
+          <div class="col shadow-sm p-3 mb-5 bg-white rounded">
+            <p>Technical tags:</p>
             {% for tag in tags_tech %}
             <a href="{{ url_for("tag", tag=tag) }}" class="btn btn-secondary btn-xs" role="button" aria-pressed="true">{{tag}}</a>
             {% endfor %}
             </div>
         </div>
       </div>
-
+      <hr>
       <!--Main section that other pages would extend goes here-->
       <div class="container">
       <br>

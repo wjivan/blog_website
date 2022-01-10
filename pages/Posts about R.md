@@ -6,10 +6,6 @@ readtime: 2 MINS
 time: TUESDAY, NOVEMBER, 2021
 tags: ["API"]
 
-# Posts about R
-
-## Posts about tidyverse functions
-
 [David Robinson's ten tips](https://www.youtube.com/watch?v=NDHSBUN_rVU)
 
 1. 	count() & creating variables in count()
