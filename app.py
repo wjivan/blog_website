@@ -61,7 +61,7 @@ def index():
     return render_template('about.html', tags_topical=tags_topical, tags_tech=tags_tech)
 
 @app.route('/blogs/')
-def about():
+def blogs():
     return render_template('blogs.html', tags_topical=tags_topical, tags_tech=tags_tech, pages=pages, tags=tags)
 
 @app.route('/tag/<string:tag>/')

@@ -36,27 +36,25 @@
 					
 					<div class="bio mb-3">Economist who enjoys using data for social good<br><a href={{ url_for("index") }}>Find out more about me</a></div><!--//bio-->
 					<ul class="social-list list-inline py-3 mx-auto">
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://twitter.com/adwenturous"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/wen-jian-48926b32/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://github.com/wjivan"><i class="fab fa-github-alt fa-fw"></i></a></li>
 			        </ul><!--//social-list-->
 			        <hr> 
 				</div><!--//profile-section-->
 				
 				<ul class="navbar-nav flex-column text-start">
 					<li class="nav-item">
-					    <a class="nav-link active" href="index.html"><i class="fas fa-home fa-fw me-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+					    <a class="nav-link active" href="{{url_for("blogs")}}"><i class="fas fa-home fa-fw me-2"></i>Blog Home <span class="sr-only">(current)</span></a>
 					</li>
+
 					<li class="nav-item">
-					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw me-2"></i>Blog Post</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
+					    <a class="nav-link" href="{{url_for("index")}}"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
 					</li>
 				</ul>
 				
 				<div class="my-2 my-md-3">
-				    <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/" target="_blank">Get in Touch</a>
+				    <a class="btn btn-primary" href="mailto:wen.jian@cantab.net" target="_blank">Get in Touch</a>
 				</div>
 			</div>
 		</nav>
