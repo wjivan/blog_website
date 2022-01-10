@@ -8,7 +8,6 @@
       
   {% for page in pages | sort(attribute='date', reverse=True) %}
     <div class="item mb-5">
-      <p>{{page.title}}</p>
       <div class="row g-3 g-xl-0">
         <div class="col-2 col-xl-3">
           <img class="img-fluid post-thumb " src="{{ page.image }}">
