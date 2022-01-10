@@ -67,8 +67,7 @@ def about():
 @app.route('/tag/<string:tag>/')
 def tag(tag):
     # Get pages objects for specific tags
-    tagged = [p for p in pages if tag in p.meta.get('tags', [])]
-    return render_template('tag.html', pages=tagged, tag=tag, tags=tags, tags_topical=tags_topical, tags_tech=tags_tech)
+    return render_template('tag.html', pages=pages, tag=tag, tags=tags, tags_topical=tags_topical, tags_tech=tags_tech)
 
 @app.route('/<path:path>/')
 def page(path):

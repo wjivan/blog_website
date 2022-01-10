@@ -3,57 +3,34 @@
   It serves to summarise blog-posts for blogs.html as well as
   tag.html. So that a smaller subset of blog-posts are displayed.
 -->
-<ul>
-{% for page in pages | sort(attribute='date', reverse=True) %}
-    <li>
-      <b>{{ page.title }}</b><br />
-      {{ page.date }}
-
-      <!--If tags are non-zero-->
-      {% if page.meta.tags|length %}
-
-        <!--Insert a separator | and some fontawesome tag icon-->
-        | <i class="fa fa-tags fa-lg"></i>
-
-        <!--Insert all the tags-->
-        {% for page_tag in page.meta.tags %}
-          <div class="block">
-            <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
-          </div>
-
-        {% endfor %}
-      {% endif %}
-      <br>
-      {{ page.description }} <br>
-      <a class="left" href="{{ url_for("page", path=page.path) }}"><i>Read More</i></a>
-    </li>
-    {% if not loop.last %}<br><br>{% endif %}
-{% else %}
-    <li>No page.</li>
-{% endfor %}
-</ul>
-
 <section class="blog-list px-3 py-5 p-md-5">
   <div class="container single-col-max-width">
-    
-      <div class="item mb-5">
-          <div class="row g-3 g-xl-0">
-              <div class="col-2 col-xl-3">
-                  <img class="img-fluid post-thumb " src="/static/images/blog/blog-post-thumb-1.jpg" alt="image">
-              </div>
-              <div class="col">
-                  <h3 class="title mb-1"><a class="text-link" href="blog-post.html">Top 3 JavaScript Frameworks</a></h3>
-                  <div class="meta mb-1"><span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a class="text-link" href="#">8 comments</a></span></div>
-                  <div class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...</div>
-                  <a class="text-link" href="blog-post.html">Read more &rarr;</a>
-              </div><!--//col-->
-          </div><!--//row-->
-      </div><!--//item-->
-
-      <nav class="blog-nav nav nav-justified my-5">
-        <a class="nav-link-prev nav-item nav-link d-none rounded-left" href="#">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-        <a class="nav-link-next nav-item nav-link rounded" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-      </nav>
+      
+  {% for page in pages | sort(attribute='date', reverse=True) %}
+    <div class="item mb-5">
+      <p>{{page.title}}</p>
+      <div class="row g-3 g-xl-0">
+        <div class="col-2 col-xl-3">
+          <img class="img-fluid post-thumb " src="{{ page.image }}">
+        </div>
+        <div class="col">
+          <h3 class="title mb-1"><a class="text-link" href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a></h3>
+          <div class="meta mb-1">
+            <span class="date">{{page.date}}</span>
+            <span class="time">{{page.readtime}}</span>
+            <span class="comment"><a class="text-link" href="#">8 comments</a></span>
+          </div>
+          <div class="intro">{{page.description}}</div>
+          <a class="text-link" href="{{ url_for("page", path=page.path) }}">Read more</a>
+        </div><!--//col-->
+      </div><!--//row-->
+    </div><!--//item--> 
+  {% endfor %} 
+      
+    <nav class="blog-nav nav nav-justified my-5">
+      <a class="nav-link-prev nav-item nav-link d-none rounded-left" href="#">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+      <a class="nav-link-next nav-item nav-link rounded" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+    </nav>
       
   </div>
 </section>

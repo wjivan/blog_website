@@ -1,7 +1,7 @@
 title: R functions
 date: 2021-10-15
 description: R functions that are worth remembering
-image: /static/pictures/Gender/gender-equality.png
+image: /static/pictures/pic2.jpg
 readtime: 2 MINS
 time: TUESDAY, NOVEMBER, 2021
 tags: ["R"]
