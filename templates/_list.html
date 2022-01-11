@@ -16,8 +16,6 @@
           <h3 class="title mb-1"><a class="text-link" href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a></h3>
           <div class="meta mb-1">
             <span class="date">{{page.date}}</span>
-            <span class="time">{{page.readtime}}</span>
-            <span class="comment"><a class="text-link" href="#">8 comments</a></span>
           </div>
           <div class="intro">{{page.description}}</div>
           <a class="text-link" href="{{ url_for("page", path=page.path) }}">Read more</a>
