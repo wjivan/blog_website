@@ -1,13 +1,13 @@
 title: Screenscraping real estate data from The Modern House website
 date: 2020-01-15
 description: How to perform screenscraping using Selenium
-image: /static/pictures/modernhousescroll/thumbnail.jpg
+image: /static/pictures/modernhousescroll/thumb.jpg
 tags: ["Web scraping", "Python"]
 
-### The Modern House
+##### The Modern House
 [The Modern House](https://www.themodernhouse.com) is a niche real estate agent that lists only architecturally unique homes for sale. The listings are tastefully presented with professional photos and introduction into the architecture history of the building.
 
-### Webscraping The Modern House website using Selenium & Beautiful Soup
+##### Webscraping The Modern House website using Selenium & Beautiful Soup
 The Modern House website has a listing of all their houses on sale now. The problem with scraping through html is that the website is dynamic. You have to scroll down to reveal all the listings.
 
 <img src="/static/pictures/modernhousescroll/modernhousescroll.gif" class="img-fluid">
