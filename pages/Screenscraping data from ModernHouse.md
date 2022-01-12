@@ -1,6 +1,6 @@
 title: Screenscraping real estate data from The Modern House website
 date: 2020-01-15
-description: How to perform screenscraping using Selenium
+description: How to perform screenscraping using Selenium to scroll through websites
 image: /static/pictures/modernhousescroll/thumb.jpg
 tags: ["Web scraping", "Python"]
 

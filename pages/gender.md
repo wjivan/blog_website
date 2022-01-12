@@ -1,10 +1,8 @@
-title: Gender inequality among top Economists
-date: 2020-12-15
-description: Gender imbalance is hindering collaborations and the future of economics research...
-image: /static/pictures/Gender/gender-equality.png
-readtime: 2 MINS
-time: TUESDAY, DECEMBER 15, 2020
-tags: ["Gender Inequality"]
+title: Gender imbalance among academic economists
+date: 2020-01-15
+description: Using journal metadata, I analyse collaboration networks among top 1500 economists to see how skewed the power dynamics are among academic economists over the past 15 years.
+image: /static/pictures/Gender/thumb.jpeg
+tags: ["Gender inequality"]
 
 <img class="responsive-img" src="/static/pictures/Gender/slide.png" alt="Slide" />
 
