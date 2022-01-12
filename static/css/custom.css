@@ -77,3 +77,15 @@ hr.fade {
 .heading-minor{
     color: #408895
 }
+
+.navfoot {
+    background: #397680;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    color: white;
+    font-size: small;
+  }
+
+.main-wrapper { height:100vh; margin:0; }

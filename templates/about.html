@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block content %}
 
 <h3 class="post-title"><b>Hello, I'm Wen!</b></h3>
@@ -31,14 +32,14 @@
 
     <h5>Topics I write about</h5>
     <p>
-        <li>Causal inference</li>
-        <li>Network Science</li>
-        <li>Applied Data Science</li>
-        <li>Gender Inequality</li>
-        <li>Machine Bias</li>
-        <li>Complexity Science</li>
-        <li>Entrepreneurship</li>
-    </p>  
+        {% for tag in tags_topical %}
+        <a href="{{ url_for("tag", tag=tag) }}" class="btn btn-primary btn-xs" role="button" aria-pressed="true">{{tag}}</a>
+        {% endfor %}
+
+        {% for tag in tags_tech %}
+        <a href="{{ url_for("tag", tag=tag) }}" class="btn btn-secondary btn-xs" role="button" aria-pressed="true">{{tag}}</a>
+        {% endfor %}
+    </p>
 
     <h5>Other Interests</h5>
     <p>
@@ -53,6 +54,5 @@
     <br>
 
 </body>
-
 
 {% endblock content %}
