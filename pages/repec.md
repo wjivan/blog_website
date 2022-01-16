@@ -68,4 +68,4 @@ One particularly useful information is the Twitter handle information on economi
 
 Using this method, I was able to scrape the metadata for 60,000 economists into a database. I can then write SQL scripts to query for any summary statistics I would like for my research. 
 
-For the full code, please visit my ![github](https://github.com/wjivan/repec-scraper) page. 
+For the full code, please visit my [github](https://github.com/wjivan/repec-scraper) page. 

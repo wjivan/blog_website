@@ -1,26 +1,54 @@
 {
   "personal": [
     {
-      "description":  "Generates artistic QR Codes",
-      "image": "qr.png",
-      "link": "https://github.com/wjivan",
-      "title": "QArtCode"
-    }
-  ],
-  "academic": [
-    {
       "description":  "Predicting corruption in public procurement using machine learning",
       "image": "dncp.png",
-      "link": "https://github.com/alan-turing-institute/DSSG19-DNCP-PUBLIC",
-      "title": "DSSG-DNCP"
+      "link": "https://zenodo.org/record/3967837#.YeAKyxPP0lI",
+      "title": "Fraud detection"
+    },
+    {
+      "description":  "Investigating gender imbalance among academic economists",
+      "image": "gender-network.png",
+      "link": "https://www.linkedin.com/pulse/graphical-view-gender-imbalance-economics-why-matters-wen-jian/",
+      "title": "Network analysis"
+    },
+    {
+      "description":  "Scraping large scale bibliometric metadata on economics publications",
+      "image": "repec.png",
+      "link": "https://github.com/wjivan/repec-scraper",
+      "title": "Scraper"
+    },
+    {
+      "description":  "Using image recognition to improve gender classification of names",
+      "image": "google.jpg",
+      "link": "#",
+      "title": "Classifier"
+    },
+    {
+      "description":  "Helping charities decode their data during weekend data dive.",
+      "image": "datakind.png",
+      "link": "#",
+      "title": "Volunteer"
+    },
+    {
+      "description":  "Personal trading bot - algorithmic trading on Interactive brokers",
+      "image": "bot.png",
+      "link": "#",
+      "title": "Algo trader"
     }
   ],
-  "presentations": [
+  "commercial": [
     {
-      "description": "Data & Policy conference 2020",
-      "image": "data_policy.jpg",
-      "link": "https://www.youtube.com/watch?v=r7KKq1_7gMg&t=384s",
-      "title": "DNCP"
+      "description": "Develop a prototype early warning system for vulnerable groups going into credit default",
+      "image": "lbg.png",
+      "link": "#",
+      "title": "EWS"
+    },
+    {
+      "description": "Develop a software for modelling market shares for local areas in a large scale supermarket merger",
+      "image": "tesco.jpeg",
+      "link": "#",
+      "title": "Geospatial"
     }
   ]
 }
