@@ -2,56 +2,94 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Wen Jian">
-    <meta name="description" content="Economics and data science">
-
-    <title>Wen Jian</title>
-    <!--
-      Styles based on Materialize
-      Font-awesome used for icons
-      Custom styles for the rest
-    -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/button.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6X3EFF1R0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-B6X3EFF1R0');
-    </script>
-
+  <title>Wen Jian</title>
+    
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wen Jian">
+  <meta name="author" content="Wen Jian">    
+  <link rel="shortcut icon" href="favicon.ico"> 
+  
+  <!-- FontAwesome JS-->
+  <script defer src="/static/fontawesome/js/all.min.js"></script>
+  
+  <!-- Theme CSS -->  
+  <link id="theme-style" rel="stylesheet" href="/static/css/theme-2.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css">
 </head>
+
 <body>
-    <nav class="navbar">
-      <div class="container">
-        <a href="/" style="color:white;"><b>WEN</b> JIAN</a>
-        <div style="float:right;">
-          <ul style="list-style:none;display:flex;">
-            <a href="/" class="left"><li class="link-list">ABOUT</li></a>
-            <a href="/blogs/" class="left"><li class="link-list">BLOG</li></a>
-            <a href="/projects/" class="left"><li class="link-list">PROJECTS</li></a>
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="/">Wen Jian</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="/static/images/profile.png" alt="image" >			
+					
+					<div class="bio mb-3">Economist who enjoys using data for social good<br></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="https://twitter.com/adwenturous"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/wen-jian-48926b32/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://github.com/wjivan"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+          <ul class="navbar-nav flex-column text-start">
+            <li class="nav-item">
+              <a class="nav-link" href="/"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/projects/"><i class="fas fa-laptop fa-fw me-2"></i>Projects</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/blogs/"><i class="fas fa-book fa-fw me-2"></i>Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:wen.jian@cantab.net"><i class="fas fa-paper-plane fa-fw me-2"></i>Get in touch</a>
+            </li>
           </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container" style="padding-bottom:100px;">
-        <br>
-        <main id="body-fade">
-            
-<h3 class="post-title"><b>Projects</b></h3>
-A compilation of some of the selected projects that
-I've worked on before. Click each project's title for more information.
-<br><br>
+			  </div>
+		</nav>
+  </header>
+    
+    <div class="main-wrapper">
+	    
+	    <section class="cta-section theme-bg-light py-3">
+		    <div class="container text-center single-col-max-width">
+			    <h2 class="heading">Economics and data science blog 
+            <a href="/blogs/" class="text-decoration-none">🏠</a>
+          </h2>
+          <!-- Note that tags is defined in app.py as a global-->
+		    </div><!--//container-->
+	    </section>
+
+      
+<div></div>
+
+
+      <!--Main section that other pages would extend goes here-->
+      <div class="container">
+      <br>
+        
+<h3 class="post-title"><b>Data Science Projects</b></h3>
+<p>For me, the best way to learn data science is to really implement something. Here's a collection of data science projects I've worked on at night alongside my day job. 
+</p>
+<h5 class="post-title">Personal data science projects</h5>
+I've picked up a lot of data science skills through Data Science For Good Fellowship and volunteering for DataKind, helping charities gain insight into data they hold. 
 <div class="card-row">
   <!--Jinja syntax for loop on the projects json loaded
   for: gives a for loop on all the projects in personal
@@ -61,63 +99,101 @@ I've worked on before. Click each project's title for more information.
   
    <div> 
     <div class="card-course card-course-1">
-      <img style="display:block;margin:auto;" src="/static/pictures/Projects/qr.png" />
-      <p><a href="https://github.com/wjivan"><strong class="project-title" style="font-size: 20px;">QArtCode</strong></a></p>
-      <p class="light-text">Generates artistic QR Codes</p>
-    </div>
-  
-  </div>
-  
-  
-</div>
-
-<h5 class="post-title">Academics</h5>
-Some research work I have been doing outside my normal work in collaboration with
-academics from Cambridge University and Carnegie Mellon University
-<br><br>
-<div class="card-row">
-  
-   <div> 
-    <div class="card-course card-course-1">
       <img style="display:block;margin:auto;" src="/static/pictures/Projects/dncp.png" />
-      <p><a href="https://github.com/alan-turing-institute/DSSG19-DNCP-PUBLIC"><strong class="project-title" style="font-size: 20px;">DSSG-DNCP</strong></a></p>
-      <p class="light-text">Predicting corruption in public procurement using machine learning</p>
+      <p><a href="https://zenodo.org/record/3967837#.YeAKyxPP0lI"><strong class="text-decoration-none" style="font-size: 20px; color: #408895">Fraud detection</strong></a></p>
+      <p style="font-size: small">Predicting corruption in public procurement using machine learning</p>
+    </div>
+  
+  
+  
+    <div class="card-course card-course-1">
+      <img style="display:block;margin:auto;" src="/static/pictures/Projects/gender-network.png" />
+      <p><a href="https://www.linkedin.com/pulse/graphical-view-gender-imbalance-economics-why-matters-wen-jian/"><strong class="text-decoration-none" style="font-size: 20px; color: #408895">Network analysis</strong></a></p>
+      <p style="font-size: small">Investigating gender imbalance among academic economists</p>
+    </div>
+  
+  
+  
+    <div class="card-course card-course-1">
+      <img style="display:block;margin:auto;" src="/static/pictures/Projects/repec.png" />
+      <p><a href="https://github.com/wjivan/repec-scraper"><strong class="text-decoration-none" style="font-size: 20px; color: #408895">Scraper</strong></a></p>
+      <p style="font-size: small">Scraping large scale bibliometric metadata on economics publications</p>
     </div>
   
   </div>
   
-  
-</div>
-
-<h5 class="post-title">Presentations</h5>
-I enjoy teaching and giving presentations and here is a clip of me presenting research 
-finding of the DNCP project at the Data & Policy Conference. 
-<br><br>
-<div class="card-row">
   
    <div> 
     <div class="card-course card-course-1">
-      <img style="display:block;margin:auto;" src="/static/pictures/Projects/data_policy.jpg" />
-      <p><a href="https://www.youtube.com/watch?v=r7KKq1_7gMg&amp;t=384s"><strong class="project-title" style="font-size: 20px;">DNCP</strong></a></p>
-      <p class="light-text">Data &amp; Policy conference 2020</p>
+      <img style="display:block;margin:auto;" src="/static/pictures/Projects/google.jpg" />
+      <p><a href="#"><strong class="text-decoration-none" style="font-size: 20px; color: #408895">Classifier</strong></a></p>
+      <p style="font-size: small">Using image recognition to improve gender classification of names</p>
+    </div>
+  
+  
+  
+    <div class="card-course card-course-1">
+      <img style="display:block;margin:auto;" src="/static/pictures/Projects/datakind.png" />
+      <p><a href="#"><strong class="text-decoration-none" style="font-size: 20px; color: #408895">Volunteer</strong></a></p>
+      <p style="font-size: small">Helping charities decode their data during weekend data dive.</p>
+    </div>
+  
+  
+  
+    <div class="card-course card-course-1">
+      <img style="display:block;margin:auto;" src="/static/pictures/Projects/bot.png" />
+      <p><a href="#"><strong class="text-decoration-none" style="font-size: 20px; color: #408895">Algo trader</strong></a></p>
+      <p style="font-size: small">Personal trading bot - algorithmic trading on Interactive brokers</p>
     </div>
   
   </div>
   
   
 </div>
-
-        </main>
+<br>
+<h5 class="post-title">Commercial Data Science</h5>
+Some data science work I've done that have been commercialised.
+<br><br>
+<div class="card-row pb-5">
+  
+   <div> 
+    <div class="card-course card-course-1">
+      <img style="display:block;margin:auto;" src="/static/pictures/Projects/lbg.png" />
+      <p><a href="#"><strong class="text-decoration-none" style="font-size: 20px; color: #408895">EWS</strong></a></p>
+      <p style="font-size: small">Develop a prototype early warning system for vulnerable groups going into credit default</p>
     </div>
-    <nav class="navfoot">
+  
+  
+  
+    <div class="card-course card-course-1">
+      <img style="display:block;margin:auto;" src="/static/pictures/Projects/tesco.jpeg" />
+      <p><a href="#"><strong class="text-decoration-none" style="font-size: 20px; color: #408895">Geospatial</strong></a></p>
+      <p style="font-size: small">Develop a software for modelling market shares for local areas in a large scale supermarket merger</p>
+    </div>
+  
+  
+</div>
+
+</div>
+
+      </div>
+      
+    </div><!--//main-wrapper-->
+
+    <nav class="navfoot py-1">
       <div style="text-align:center;">
-        &copy; 2020 |
-        &thinsp; <a href="https://www.linkedin.com/in/wen-jian-48926b32/" class="link-fa"><i class="fa fa-linkedin fa-lg"></i></a>
-        &thinsp; <a href="https://github.com/wjivan" class="link-fa"><i class="fa fa-github fa-lg"></i></a>
+        &copy; 2021 |
+        &thinsp; <a href="https://www.linkedin.com/in/wen-jian-48926b32/"><i class="fab fa-linkedin fa-lg"></i></a>
+        &thinsp; <a href="https://github.com/wjivan"><i class="fab fa-github fa-lg"></i></a> |
       </div>
     </nav>
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <script src="/static/js/button.js"></script>
+
+    <!-- Javascript -->          
+    <script src="/static/plugins/popper.min.js"></script> 
+    <script src="/static/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
 </body>
 
 </html>

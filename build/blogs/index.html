@@ -2,66 +2,106 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Wen Jian">
-    <meta name="description" content="Economics and data science">
+  <title>Wen Jian</title>
     
-    <!-- Required meta tags for Bootstrap-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Wen Jian</title>
-    <!--
-      Styles based on Bootstrap
-      Font-awesome used for icons
-      Custom styles for the rest
-    -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
-    <!-- minimum CSS for now
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/button.css">
-    -->
-
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wen Jian">
+  <meta name="author" content="Wen Jian">    
+  <link rel="shortcut icon" href="favicon.ico"> 
+  
+  <!-- FontAwesome JS-->
+  <script defer src="/static/fontawesome/js/all.min.js"></script>
+  
+  <!-- Theme CSS -->  
+  <link id="theme-style" rel="stylesheet" href="/static/css/theme-2.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css">
 </head>
+
 <body>
-    <nav class="navbar">
-      <div class="container">
-        <a href="/" style="color:white;"><b>WEN</b> JIAN</a>
-        <div style="float:right;">
-          <ul style="list-style:none;display:flex;">
-            <a href="/" class="left"><li class="link-list">ABOUT</li></a>
-            <a href="/blogs/" class="left"><li class="link-list">BLOG</li></a>
-            <a href="/projects/" class="left"><li class="link-list">PROJECTS</li></a>
+    <header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="/">Wen Jian</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" src="/static/images/profile.png" alt="image" >			
+					
+					<div class="bio mb-3">Economist who enjoys using data for social good<br></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="https://twitter.com/adwenturous"><i class="fab fa-twitter fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/wen-jian-48926b32/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="https://github.com/wjivan"><i class="fab fa-github-alt fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+          <ul class="navbar-nav flex-column text-start">
+            <li class="nav-item">
+              <a class="nav-link" href="/"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/projects/"><i class="fas fa-laptop fa-fw me-2"></i>Projects</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/blogs/"><i class="fas fa-book fa-fw me-2"></i>Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:wen.jian@cantab.net"><i class="fas fa-paper-plane fa-fw me-2"></i>Get in touch</a>
+            </li>
           </ul>
+			  </div>
+		</nav>
+  </header>
+    
+    <div class="main-wrapper">
+	    
+	    <section class="cta-section theme-bg-light py-3">
+		    <div class="container text-center single-col-max-width">
+			    <h2 class="heading">Economics and data science blog 
+            <a href="/blogs/" class="text-decoration-none">🏠</a>
+          </h2>
+          <!-- Note that tags is defined in app.py as a global-->
+		    </div><!--//container-->
+	    </section>
+
+      
+      <div class="container">
+        <div class="row px-5 d-flex justify-content-center">
+          <div class="col-8 shadow-sm p-3 mb-5 bg-white rounded text-center">
+              <p class="heading-minor"><b>Topics I write about:</b></p>
+              
+              <a href="/tag/Web%20scraping/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Web scraping</a>
+              
+              <a href="/tag/Gender%20inequality/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Gender inequality</a>
+              
+
+              
+                <a href="/tag/Python/" class="btn btn-secondary btn-xs" role="button" aria-pressed="true">Python</a>
+                
+        
+          </div>
         </div>
       </div>
-    </nav>
-    <div class="container" style="padding-bottom:100px;">
-        <br>
-        <main id="body-fade">
-            
-  <h3 class="post-title"><b>Posts</b></h3>
+      
 
-  <div class="block">
-    <a href="/blogs/">All</a>
-  </div>
-
-  
-    <div class="block">
-      <a href="/tag/API/">API</a>
-    </div>
-  
-    <div class="block">
-      <a href="/tag/Gender%20Inequality/">Gender Inequality</a>
-    </div>
-  
-    <div class="block">
-      <a href="/tag/R/">R</a>
-    </div>
-  
+      <!--Main section that other pages would extend goes here-->
+      <div class="container">
+      <br>
+        
+  <h3>Posts</h3>
 
 <!--Add in the list of page summaries populated in _list.html-->
   
@@ -70,118 +110,84 @@
   It serves to summarise blog-posts for blogs.html as well as
   tag.html. So that a smaller subset of blog-posts are displayed.
 -->
-<ul>
-
-    <li>
-      <b>Tidyverse functions</b><br />
-      2021-11-16
-
-      <!--If tags are non-zero-->
+<section class="blog-list">
+  <div class="container single-col-max-width">
       
-
-        <!--Insert a separator | and some fontawesome tag icon-->
-        | <i class="fa fa-tags fa-lg"></i>
-
-        <!--Insert all the tags-->
-        
-          <div class="block">
-            <a href="/tag/API/">API</a>
+  
+    <div class="item mb-5">
+      <div class="row g-3 g-xl-0">
+        <div class="col-2 col-xl-3">
+          <img class="img-fluid post-thumb shadow-sm p-3 bg-body rounded" src="/static/pictures/modernhousescroll/thumb.jpg">
+        </div>
+        <div class="col">
+          <h3 class="title mb-1"><a class="text-link" href="/Screenscraping%20data%20from%20ModernHouse/">Screenscraping real estate data from The Modern House website</a></h3>
+          <div class="meta mb-1">
+            <!-- <span class="date">2020-01-15</span> -->
           </div>
-
-        
-      
-      <br>
-      Tidyverse functions <br>
-      <a class="left" href="/Posts%20about%20R/"><i>Read More</i></a>
-    </li>
-    <br><br>
-
-    <li>
-      <b>R functions</b><br />
-      2021-10-15
-
-      <!--If tags are non-zero-->
-      
-
-        <!--Insert a separator | and some fontawesome tag icon-->
-        | <i class="fa fa-tags fa-lg"></i>
-
-        <!--Insert all the tags-->
-        
-          <div class="block">
-            <a href="/tag/R/">R</a>
+          <div class="intro">How to perform screenscraping using Selenium to scroll through websites</div>
+          <a class="text-link" href="/Screenscraping%20data%20from%20ModernHouse/">Read more</a>
+        </div><!--//col-->
+      </div><!--//row-->
+    </div><!--//item--> 
+  
+    <div class="item mb-5">
+      <div class="row g-3 g-xl-0">
+        <div class="col-2 col-xl-3">
+          <img class="img-fluid post-thumb shadow-sm p-3 bg-body rounded" src="/static/pictures/repec/thumb.png">
+        </div>
+        <div class="col">
+          <h3 class="title mb-1"><a class="text-link" href="/repec/">Scraping REPEC website for economics bibliometric data into a database</a></h3>
+          <div class="meta mb-1">
+            <!-- <span class="date">2020-01-15</span> -->
           </div>
-
-        
-      
-      <br>
-      R functions that are worth remembering <br>
-      <a class="left" href="/Some%20R%20functions%20that%20blew%20my%20mind%20recently/"><i>Read More</i></a>
-    </li>
-    <br><br>
-
-    <li>
-      <b>Getting Gmail to work with Python</b><br />
-      2021-10-15
-
-      <!--If tags are non-zero-->
-      
-
-        <!--Insert a separator | and some fontawesome tag icon-->
-        | <i class="fa fa-tags fa-lg"></i>
-
-        <!--Insert all the tags-->
-        
-          <div class="block">
-            <a href="/tag/API/">API</a>
+          <div class="intro">Gathering data to study economics journal activities around the world</div>
+          <a class="text-link" href="/repec/">Read more</a>
+        </div><!--//col-->
+      </div><!--//row-->
+    </div><!--//item--> 
+  
+    <div class="item mb-5">
+      <div class="row g-3 g-xl-0">
+        <div class="col-2 col-xl-3">
+          <img class="img-fluid post-thumb shadow-sm p-3 bg-body rounded" src="/static/pictures/Gender/thumb.jpeg">
+        </div>
+        <div class="col">
+          <h3 class="title mb-1"><a class="text-link" href="/gender/">Gender imbalance among academic economists</a></h3>
+          <div class="meta mb-1">
+            <!-- <span class="date">2020-01-15</span> -->
           </div>
-
-        
-      
-      <br>
-      Using Gmail API <br>
-      <a class="left" href="/Gmail/"><i>Read More</i></a>
-    </li>
-    <br><br>
-
-    <li>
-      <b>Gender inequality among top Economists</b><br />
-      2020-12-15
-
-      <!--If tags are non-zero-->
+          <div class="intro">Using journal metadata, I analyse collaboration networks among top 1500 economists to see how skewed the power dynamics are among academic economists over the past 15 years.</div>
+          <a class="text-link" href="/gender/">Read more</a>
+        </div><!--//col-->
+      </div><!--//row-->
+    </div><!--//item--> 
+   
       
 
-        <!--Insert a separator | and some fontawesome tag icon-->
-        | <i class="fa fa-tags fa-lg"></i>
-
-        <!--Insert all the tags-->
-        
-          <div class="block">
-            <a href="/tag/Gender%20Inequality/">Gender Inequality</a>
-          </div>
-
-        
       
-      <br>
-      Gender imbalance is hindering collaborations and the future of economics research... <br>
-      <a class="left" href="/gender/"><i>Read More</i></a>
-    </li>
-    
-
-</ul>
+  </div>
+</section>
   
 
-        </main>
-    </div>
-    <nav class="navfoot">
+
+      </div>
+      
+    </div><!--//main-wrapper-->
+
+    <nav class="navfoot py-1">
       <div style="text-align:center;">
-        &copy; 2020 |
-        &thinsp; <a href="https://www.linkedin.com/in/wen-jian-48926b32/" class="link-fa"><i class="fa fa-linkedin fa-lg"></i></a>
-        &thinsp; <a href="https://github.com/wjivan" class="link-fa"><i class="fa fa-github fa-lg"></i></a>
+        &copy; 2021 |
+        &thinsp; <a href="https://www.linkedin.com/in/wen-jian-48926b32/"><i class="fab fa-linkedin fa-lg"></i></a>
+        &thinsp; <a href="https://github.com/wjivan"><i class="fab fa-github fa-lg"></i></a> |
       </div>
     </nav>
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <script src="/static/js/button.js"></script>
+
+    <!-- Javascript -->          
+    <script src="/static/plugins/popper.min.js"></script> 
+    <script src="/static/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
 </body>
 
 </html>
