@@ -118,13 +118,18 @@
     <script src="/static/plugins/bootstrap/js/bootstrap.min.js"></script> 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        config: ["MMLorHTML.js"],
-        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
-        extensions: ["MathMenu.js", "MathZoom.js"]
-      });
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
       </script>
 </body>
 

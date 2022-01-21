@@ -20,7 +20,7 @@ app.config.from_object(__name__)
 pages = FlatPages(app)  # contains links to all pages ending with .md
 
 # Define the markdown style
-markdown_manager = Markdown(app, extensions=['fenced_code'], output_format='html5')
+markdown_manager = Markdown(app, extensions=['fenced_code', 'mdx_math'], output_format='html5')
 
 # Frozen App
 # Currently the Flask app is still serving the rendering the flat pages

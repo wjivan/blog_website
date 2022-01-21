@@ -9,6 +9,18 @@
     height: 1.5rem;
   }
 
+
+/* Img */
+
+figure {
+  display: table;
+}
+figcaption {
+  display: table-caption;
+  caption-side: top;
+  font-weight: bold;
+}
+
 /* Tag Blocks */
 .block {
     width: auto;
