@@ -1,28 +1,25 @@
 title: Automate movie metadata for Obsidian on IMDB API
 date: 2020-01-15
 description: Get all the interesting metadata for your favourite movies on IMDB so that you can focus on your reviews and not spend time setting up the metadata. 
-image: /static/pictures/foreignaid/thumb.png
-tags: ["Productivity", "Python""]
+image: /static/pictures/obsidianmovies/thumb.png
+tags: ["Productivity", "Python"]
 
 ###### Motivation
 Obsidian is a great productivity tool that I use to keep my thoughts and ideas in place. One area I want to log and review are movies. When I sat down and listed all my favourite movies, it came down to a list of more than 100 movies! Trying to search through the cast and directors for all these movies is time consuming and I just want to get a quick summary of the movie before trying to write my own thoughts on them. So I decided to use Python to automate this for me. 
 
-###### Requirements
-You need to install Python and its required packages for this to work. To install these, type `pip install requirements.txt`. 
-
 ###### How this works
 1. Input all the movies to search into the csv `movies_to_search.csv`. 
 2. The script makes use of the [`imdb` package](https://imdbpy.github.io/) to download the metadata from IMDB. This does not require you to have an IMDB api account. You can check out their documentations on what data is available to adjust as required. I created a function that allows me to down the information regarding:
-- title
-- plot
-- genre
-- country
-- cover url
-- director
-- kind
-- rating
-- synopsis
-- year
+    - title
+    - plot
+    - genre
+    - country
+    - cover url
+    - director
+    - kind
+    - rating
+    - synopsis
+    - year
 
 <pre><code>
 from imdb import IMDb
@@ -156,7 +153,7 @@ def movie_search(my_title):
     return(information)
     </code></pre>
 
-3. Obsidian reads markdown pages so I automate the creation of markdown pages using python using [mdutils](https://pypi.org/project/mdutils/). I create a function to automate the creation of a standard template filled in with the new metadata:
+Obsidian reads markdown pages so I automate the creation of markdown pages using python using [mdutils](https://pypi.org/project/mdutils/). I create a function to automate the creation of a standard template filled in with the new metadata:
 
 <pre><code>
 def create_markdown_page(myresults):
