@@ -20,6 +20,17 @@
   <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6X3EFF1R0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B6X3EFF1R0');
+  </script>
+
 </head>
 
 <body>
@@ -70,9 +81,9 @@
 	    
 	    <section class="cta-section theme-bg-light py-3">
 		    <div class="container text-center single-col-max-width">
-			    <h2 class="heading">Economics and data science blog 
-            <a href="/blogs/" class="text-decoration-none">🏠</a>
-          </h2>
+			    <h5 class="d-flex flex-row-reverse"> 
+            <a href="/blogs/" class="text-decoration-none" style="color: black">🏠 &nbsp; Economics and data science</a>
+          </h5>
           <!-- Note that tags is defined in app.py as a global-->
 		    </div><!--//container-->
 	    </section>
@@ -83,13 +94,21 @@
           <div class="col-8 shadow-sm p-3 mb-5 bg-white rounded text-center">
               <p class="heading-minor"><b>Topics I write about:</b></p>
               
+              <a href="/tag/Productivity/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Productivity</a>
+              
               <a href="/tag/Web%20scraping/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Web scraping</a>
               
+              <a href="/tag/Visualisation/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Visualisation</a>
+              
               <a href="/tag/Gender%20inequality/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Gender inequality</a>
+              
+              <a href="/tag/Network%20analysis/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Network analysis</a>
               
 
               
                 <a href="/tag/Python/" class="btn btn-secondary btn-xs" role="button" aria-pressed="true">Python</a>
+                
+                <a href="/tag/R/" class="btn btn-secondary btn-xs" role="button" aria-pressed="true">R</a>
                 
         
           </div>
@@ -121,22 +140,6 @@
     <div class="item mb-5">
       <div class="row g-3 g-xl-0">
         <div class="col-2 col-xl-3">
-          <img class="img-fluid post-thumb shadow-sm p-3 bg-body rounded" src="/static/pictures/modernhousescroll/thumb.jpg">
-        </div>
-        <div class="col">
-          <h3 class="title mb-1"><a class="text-link" href="/Screenscraping%20data%20from%20ModernHouse/">Screenscraping real estate data from The Modern House website</a></h3>
-          <div class="meta mb-1">
-            <!-- <span class="date">2020-01-15</span> -->
-          </div>
-          <div class="intro">How to perform screenscraping using Selenium to scroll through websites</div>
-          <a class="text-link" href="/Screenscraping%20data%20from%20ModernHouse/">Read more</a>
-        </div><!--//col-->
-      </div><!--//row-->
-    </div><!--//item--> 
-  
-    <div class="item mb-5">
-      <div class="row g-3 g-xl-0">
-        <div class="col-2 col-xl-3">
           <img class="img-fluid post-thumb shadow-sm p-3 bg-body rounded" src="/static/pictures/repec/thumb.png">
         </div>
         <div class="col">
@@ -146,6 +149,38 @@
           </div>
           <div class="intro">Gathering data to study economics journal activities around the world</div>
           <a class="text-link" href="/repec/">Read more</a>
+        </div><!--//col-->
+      </div><!--//row-->
+    </div><!--//item--> 
+  
+    <div class="item mb-5">
+      <div class="row g-3 g-xl-0">
+        <div class="col-2 col-xl-3">
+          <img class="img-fluid post-thumb shadow-sm p-3 bg-body rounded" src="/static/pictures/modernhousescroll/thumb.jpg">
+        </div>
+        <div class="col">
+          <h3 class="title mb-1"><a class="text-link" href="/modernhouse/">Screenscraping real estate data from The Modern House website</a></h3>
+          <div class="meta mb-1">
+            <!-- <span class="date">2020-01-15</span> -->
+          </div>
+          <div class="intro">How to perform screenscraping using Selenium to scroll through websites</div>
+          <a class="text-link" href="/modernhouse/">Read more</a>
+        </div><!--//col-->
+      </div><!--//row-->
+    </div><!--//item--> 
+  
+    <div class="item mb-5">
+      <div class="row g-3 g-xl-0">
+        <div class="col-2 col-xl-3">
+          <img class="img-fluid post-thumb shadow-sm p-3 bg-body rounded" src="/static/pictures/obsidianmovies/thumb.png">
+        </div>
+        <div class="col">
+          <h3 class="title mb-1"><a class="text-link" href="/obsidianmovie/">Automate movie metadata for Obsidian on IMDB API</a></h3>
+          <div class="meta mb-1">
+            <!-- <span class="date">2020-01-15</span> -->
+          </div>
+          <div class="intro">Get all the interesting metadata for your favourite movies on IMDB so that you can focus on your reviews and not spend time setting up the metadata.</div>
+          <a class="text-link" href="/obsidianmovie/">Read more</a>
         </div><!--//col-->
       </div><!--//row-->
     </div><!--//item--> 
@@ -174,7 +209,19 @@
     <script src="/static/plugins/bootstrap/js/bootstrap.min.js"></script> 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
 </body>
 
 </html>

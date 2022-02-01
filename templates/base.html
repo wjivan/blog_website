@@ -78,9 +78,10 @@
   </header>
     
     <div class="main-wrapper">
-	    
+	    <article class="about-section py-5">
+
 	    <section class="cta-section theme-bg-light py-3">
-		    <div class="container text-center single-col-max-width">
+		    <div class="container text-center">
 			    <h5 class="d-flex flex-row-reverse"> 
             <a href="{{url_for("blogs")}}" class="text-decoration-none" style="color: black">🏠 &nbsp; Economics and data science</a>
           </h5>
@@ -91,7 +92,7 @@
       {% block head %}
       <div class="container">
         <div class="row px-5 d-flex justify-content-center">
-          <div class="col-8 shadow-sm p-3 mb-5 bg-white rounded text-center">
+          <div class="col-6 shadow-sm p-3 mb-5 bg-white rounded text-center">
               <p class="heading-minor"><b>Topics I write about:</b></p>
               {% for tag in tags_topical %}
               <a href="{{ url_for("tag", tag=tag) }}" class="btn btn-primary btn-xs" role="button" aria-pressed="true">{{tag}}</a>
@@ -114,6 +115,7 @@
         {% endblock content %}
       </div>
       
+      </article>
     </div><!--//main-wrapper-->
 
     <nav class="navfoot py-1">

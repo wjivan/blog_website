@@ -20,6 +20,17 @@
   <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6X3EFF1R0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B6X3EFF1R0');
+  </script>
+
 </head>
 
 <body>
@@ -70,9 +81,9 @@
 	    
 	    <section class="cta-section theme-bg-light py-3">
 		    <div class="container text-center single-col-max-width">
-			    <h2 class="heading">Economics and data science blog 
-            <a href="/blogs/" class="text-decoration-none">🏠</a>
-          </h2>
+			    <h5 class="d-flex flex-row-reverse"> 
+            <a href="/blogs/" class="text-decoration-none" style="color: black">🏠 &nbsp; Economics and data science</a>
+          </h5>
           <!-- Note that tags is defined in app.py as a global-->
 		    </div><!--//container-->
 	    </section>
@@ -83,13 +94,21 @@
           <div class="col-8 shadow-sm p-3 mb-5 bg-white rounded text-center">
               <p class="heading-minor"><b>Topics I write about:</b></p>
               
+              <a href="/tag/Productivity/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Productivity</a>
+              
               <a href="/tag/Web%20scraping/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Web scraping</a>
               
+              <a href="/tag/Visualisation/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Visualisation</a>
+              
               <a href="/tag/Gender%20inequality/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Gender inequality</a>
+              
+              <a href="/tag/Network%20analysis/" class="btn btn-primary btn-xs" role="button" aria-pressed="true">Network analysis</a>
               
 
               
                 <a href="/tag/Python/" class="btn btn-secondary btn-xs" role="button" aria-pressed="true">Python</a>
+                
+                <a href="/tag/R/" class="btn btn-secondary btn-xs" role="button" aria-pressed="true">R</a>
                 
         
           </div>
@@ -198,7 +217,19 @@ def get_author_urls(first, last):
     <script src="/static/plugins/bootstrap/js/bootstrap.min.js"></script> 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+      </script>
 </body>
 
 </html>
